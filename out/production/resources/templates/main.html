@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Diary</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- 기존 페이지 -->
+<form action="/member/saveDiary" method="post">
+<div class="container" id="mainPage">
+    <div class="header">
+        <img id="calendarIcon" src="/images/달력.png" alt="달력">
+        <div class="title">EMOTIONAL<br>DIARY</div>
+    </div>
+    <input type="date" class="date" name="date">
+    <div class="buttons">
+        <input type="hidden" id="emotionInput" name="emotion" value="">
+        <button id="angry" type="button" value="angry">angry</button>
+        <button id="happy" type="button" value="happy">happy</button>
+        <button id="sad" type="button">sad</button>
+    </div>
+    <input type="text" placeholder="오늘의 일기" class="textarea" name="contents">
+    <div class="controls">
+
+        <button id="playPause" type="button"><img src="/images/재생.png" alt="재생"></button>
+        <input id="save" type="submit" value="SAVE">
+        <button class="diaryViewBtn" type="button"><a href="/member/diary" class="diary">diary</a></button>
+    </div>
+</div>
+</form>
+
+<!-- 새로운 페이지 -->
+<div class="calendar-page" id="calendarPage" style="display: none;">
+    <a id="backToMain">대충 달력 이미지 있다 치고 이거 누르면 돌아감</a>
+</div>
+
+<!-- 오디오 플레이어 추가 -->
+<audio id="audioPlayer"></audio>
+
+<script src="/js/app.js">
+    //emotion 처리
+    document.addEventListener("DOMContentLoaded", function () {
+        const emotionButtons = document.querySelectorAll(".emotion");
+
+        emotionButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                // 클릭된 버튼의 id 값을 숨겨진 input 필드에 설정
+                document.getElementById("emotionInput").value = button.id;
+
+                // 선택된 버튼 강조 표시 (선택된 버튼만 강조)
+                emotionButtons.forEach((btn) => btn.classList.remove("selected"));
+                button.classList.add("selected");
+            });
+        });
+    });
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="day" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotional Diary</title>
+  <link rel="stylesheet" href="/css/design.css">
+</head>
+<body>
+<div class="diary-container">
+  <div class="header">
+    <div class="title">EMOTIONAL<br>DIARY</div>
+  </div>
+
+  <div class="calendar-content">
+    <div class="month-header">
+      <div class="month-left">
+        <div class="month-number">1</div>
+        <div class="month-info">
+          JANUARY<br>2025
+        </div>
+      </div>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="weekday sunday">SUN</div>
+      <div class="weekday">MON</div>
+      <div class="weekday">TUE</div>
+      <div class="weekday">WED</div>
+      <div class="weekday">THU</div>
+      <div class="weekday">FRI</div>
+      <div class="weekday">SAT</div>
+
+      <div class="day"></div>
+      <div class="day"></div>
+      <div class="day"></div>
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day">3</div>
+      <div class="day">4</div>
+
+      <div class="day sunday">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10</div>
+      <div class="day">11</div>
+
+      <div class="day sunday">12</div>
+      <div class="day">13</div>
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+      <div class="day">17</div>
+      <div class="day">18</div>
+
+      <div class="day sunday">19</div>
+      <div class="day">20</div>
+      <div class="day">21</div>
+      <div class="day">22</div>
+      <div class="day">23</div>
+      <div class="day">24</div>
+      <div class="day">25</div>
+
+      <div class="day sunday">26</div>
+      <div class="day">27</div>
+      <div class="day">28</div>
+      <div class="day">29</div>
+      <div class="day">30</div>
+      <div class="day">31</div>
+      <div class="day"></div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="save-button">BACK</button>
+  </div>
+  <script>
+    document.querySelector('.save-button').addEventListener('click', () => {
+      // 현재 캘린더 페이지를 숨기고 메인 페이지로 이동
+      window.location.href = '/member/main'; // 메인 페이지의 파일명을 적절히 수정
+    });
+  </script>
+    </body>
+</html>
